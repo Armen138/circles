@@ -10,6 +10,7 @@ var babelify = require('babelify');
 gulp.task('default', function() {
 	var b = browserify({
 		entries: './src/circles.js',
+		paths: [ __dirname + '/src' ],
 		debug: true,
 		transform: [ babelify ]
 	});
